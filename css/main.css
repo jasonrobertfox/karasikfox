@@ -1,0 +1,332 @@
+/* PARALLAX SCROLLING EXPERIMENT
+   Master Styles
+   Author: Jonathan Nicol (f6design.com)
+*****************************************************************/
+
+
+/* Global reset
+   http://meyerweb.com/eric/tools/css/reset/ 
+*****************************************************************/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Extended base styles (site specific)
+*****************************************************************/
+
+html { 
+	overflow-y: scroll; /* always force a scrollbar in non-IE */
+	}
+body {
+	background: #000;
+	overflow-x: hidden;
+	height: 9700px;
+	line-height: 1.5;
+	color: #fff;
+	font-size: 14px;
+	font-family: Helvetica, Arial,sans-serif;
+}
+
+#info{
+position: absolute;
+top: 9600px;
+line-height: 1.5;
+color: white;
+font-size: 14px;
+font-family: Helvetica, Arial,sans-serif;
+width: 100%;
+color:#888;
+}
+h1 {
+	color: #FFF;
+}
+a, a:link,
+a:active,
+a:visited {
+	-webkit-transition: color 0.25s ease-out;
+	-moz-transition: color 0.25s ease-out;
+	-o-transition: color 0.25s ease-out;
+	transition: color 0.25s ease-out;
+	color:#bbb;
+	outline: none;
+	text-decoration:none;
+	}
+	a:hover { 
+		color:#fff;
+		}
+img { 
+	display:block;
+	}
+p {
+	margin:1em 0;
+	}
+
+/* Common shared styles
+*****************************************************************/
+
+hr {
+	margin: 0;
+	border: none;
+	border-top: 1px solid #3b3b3b;
+	border-bottom: 1px solid #3b3b3b;
+	height: 3px;
+}
+
+/* Page structure
+*****************************************************************/
+
+#wrapper {
+	position: relative;
+}
+#branding {
+	width: 100%;
+	background: #fff;
+	}
+	#branding h1 {
+		width: 940px;
+		padding: 10px 15px;
+		margin: 0 auto;
+		text-transform: uppercase;
+		font-size: 18px;
+		font-weight: bold;
+		}
+
+/* Nav
+*****************************************************************/
+
+nav#primary {
+	z-index: 5;
+	position: fixed;
+	top: 50%;
+	right: 16px;
+	margin-top: -40px;
+}
+nav#primary li {
+	position: relative;
+	height: 20px;
+}
+nav#primary a {
+	display: block;
+	width: 20px;
+	height: 20px;
+	text-indent: -9999px;
+	background: transparent url('../img/nav-dot.png') 4px 4px no-repeat;
+}
+nav#primary a:hover, nav#primary a.active {
+	background: transparent url('../img/nav-dot.png') 4px -16px no-repeat;
+
+}
+nav#primary h1 {
+	position: absolute;
+	right: 22px;
+	top: -7px;
+	display: none;
+	padding: 4px 20px 4px 7px;;
+	color: #fff;
+	white-space: nowrap;
+	background: transparent url('../img/nav-arrow.png') 100% 50% no-repeat;
+	}
+nav.next-prev {
+	margin: 20px 0 0 0;
+		margin: 14px 22px 10px;
+position: relative;
+top: -15px;
+font-size: 31px;
+font-weight: bold;
+
+	}
+
+	#home-nav{
+		position: relative;
+top: -51px;
+left: 53px;
+	}
+	a.prev,
+	a.next {
+
+		width: 15px;
+		height: 11px;
+		}
+	a.prev {
+		margin: 0 auto 0px auto;
+		}
+		a.prev:hover {
+			}
+	a.next {
+		margin: 0px auto 0 auto;
+		float: right;
+		}
+		a.next:hover {
+			}
+
+/* Parallax
+*****************************************************************/
+
+/* content */
+#content {
+	z-index: 4;
+	position: relative;
+	max-width: 940px;
+	padding: 0 10px;
+	margin: 0 auto;
+	line-height: 1.7;
+	}
+	#content article {
+		width: 750px;
+		}
+		#home-page ,
+		#sailing,
+		#bike,
+		#mountain,
+		#building {
+			padding-top: 80px;
+			background: rgba(0, 0, 0, 0.6);
+			}
+		#home-page {
+			position: absolute;
+			top: 0px;
+			}
+		#sailing {
+			position: absolute;
+			top: 1275px;
+			}
+		#bike {
+			position: absolute;
+			top: 2475px;
+			}
+			#content h1 {
+				margin: 0 0 25px 0;
+				font-size: 250px;
+				font-family: Helvetica, Arial, sans-serif;
+
+				font-weight: bold;
+				line-height: 200px;
+				}
+			#content h2{
+				margin: 0 0 25px 20px;
+				font-size: 120px;
+				font-family: Helvetica, Arial, sans-serif;
+
+				font-weight: bold;
+				line-height: 120px;
+			}
+			#content h3{
+				margin: 0 0 25px 20px;
+				font-size: 30px;
+				font-family: Helvetica, Arial, sans-serif;
+
+				
+				line-height: 30px;
+			}
+		#mountain {
+			position: absolute;
+			top: 4025px;
+			}
+		#building {
+			position: absolute;
+			top: 5500px;			
+		}
+		#joy{
+			position: absolute;
+			top: 8900px;
+		}
+/* foreground (ballons/landscape) */
+#parallax-bg3 {
+	z-index: 3;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 940px;
+	margin-left: -470px; /* move left by half element's width */
+	}
+	/* balloon */
+	
+	#bg3-2 {
+		position: absolute;
+		top: 812px;
+		left: -400px;
+		}
+	
+	#bg3-4 {
+		position: absolute;
+		top: 3000px;
+		left: -400px;
+		}
+		#bg3-5 {
+		position: absolute;
+		top: 6900px;
+		left: -330px;
+		}
+/* midground (clouds) */
+#parallax-bg2 {
+	z-index: 2;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 1200px;
+	margin-left: -600px; /* move left by half element's width */
+	}
+	
+	#bg2-3 {
+		position: absolute;
+		top: 1200px;
+		left: -200px;
+		}
+	
+/* background (clouds) */
+#parallax-bg1 {
+	z-index: 1;
+	position: fixed;
+	left: 50%; /* align left edge with center of viewport */
+	top: 0;
+	width: 1200px;
+	margin-left: -600px; /* move left by half element's width */
+	}
+	
+	#bg1-4 {
+		position: absolute;
+		top: 1000px;
+		left: -150px;
+		}
+

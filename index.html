@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html>
+	
+	<head>
+		<title>Karasik Fox - pour la joie de vivre</title>
+
+		<meta charset="utf-8" />
+		<meta name="description" content="A parallax scrolling experiment using jQuery" />
+
+		<link rel="stylesheet" media="all" href="css/main.css" />
+
+		<script src="js/modernizr.custom.37797.js"></script> 
+		<!-- Grab Google CDN's jQuery. fall back to local if necessary --> 
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> 
+		<script>!window.jQuery && document.write('<script src="/js/jquery-1.6.1.min.js"><\/script>')</script>
+		<script src="js/parallax.js"></script>
+	</head>
+
+	<body>
+
+		<div id="wrapper">			
+			<nav id="primary">
+				<ul>
+					<li>
+						<a class="home-page" href="#home-page">View</a>
+					</li>
+					<li>
+						<a class="sailing" href="#sailing">View</a>
+					</li>
+					<li>
+						<a class="bike" href="#bike">View</a>
+					</li>
+					<li>
+						<a class="mountain" href="#mountain">View</a>
+					</li>
+					<li>
+						<a class="building" href="#building">View</a>
+					</li>
+				</ul>
+			</nav>
+			
+			<div id="content">
+				<article id="home-page">
+					<header>
+						<h1>Karasik Fox</h1>
+					</header>
+					<h3>Delivering Exhilerating Financial &amp; Software Solutions.</h3>
+					<nav class="next-prev" >
+						<a id="home-nav" class="next sailing" href="#sailing">&gt;</a>
+					</nav>
+				</article>
+				
+				<article id="sailing">
+					<header>
+						<h2>Navigating choppy financial markets.</h2>
+					</header>
+					<h3>Bull or bear, a steady hand and wise asset allocation will keep you on the right course.</h3>
+					<nav class="next-prev">
+						<a class="prev home-page" href="#home-page">&lt;</a>
+					
+						<a class="next bike" href="#bike">&gt;</a>
+					</nav>
+				</article>
+				
+				<article id="bike">
+					<header>
+						<h2>Precision software engineering.</h2>
+					</header>
+					<h3>At the limit there is no room for downtime and system failures. Mobile or cloud, we deliver scaleability.</h3>
+					<nav class="next-prev">
+						<a class="prev sailing" href="#sailing">&lt;</a>
+					
+						<a class="next mountain" href="#mountain">&gt;</a>
+					</nav>
+				</article>
+				
+				<article id="mountain">
+					<header>
+						<h2>Quality at the highest level.</h2>
+					</header>
+					<h3>Consulting services for the most challenging strategic goals. Your mission is our mission.</h3>
+					<nav class="next-prev">
+						<a class="prev bike" href="#bike">&lt;</a>
+						<a class="next building" href="#building">&gt;</a>
+					</nav>
+				</article>
+
+				<article id="building">
+					<header>
+						<h2>A global strategic partner.</h2>
+					</header>
+					<h3>From New York to Hong Kong. A rich global perspective to achive synergies in a changing world.</h3>
+					<nav class="next-prev">
+						<a class="prev mountain" href="#mountain">&lt;</a>
+						<a class="next joy" href="#joy">&gt;</a>
+					</nav>	
+				</article>
+
+				<article id="joy">
+
+				</article>
+<div id="info"><center>How can we help you achieve pure exhileration?<p>
+Tell us at <a href="mailto:win@karasikfox.com">win@karasikfox.com</a></center></div>	
+
+
+			</div>
+			
+			<!-- Parallax foreground -->
+			<div id="parallax-bg3">
+				<!-- <img id="bg3-1" src="img/sail.jpg" width="529" height="757" alt="Montgolfier hot air balloon"/> -->
+				<img id="bg3-2" src="img/sail.jpg" width="1600px" height="1000px" alt="Frameless parachute"/>
+				<!-- <img id="bg3-3" src="img/balloon3.png" width="446" height="713" alt="Blanchard's air balloon"/> -->
+				<img id="bg3-4" src="img/mountain.jpg" width="1600px" height="1000px" alt="Landscape with trees and cows"/>
+				<img id="bg3-5" src="img/joy.png" />
+
+			</div>
+			
+			<!-- Parallax  midground clouds -->
+			<div id="parallax-bg2">
+				<img id="bg2-3" src="img/bike.jpg" width="1600px" alt="cloud"/>
+			</div>
+			
+			<!-- Parallax  background clouds -->
+			<div id="parallax-bg1">
+				<img id="bg1-4" src="img/building.jpg" width="1600px" alt="cloud"/>
+			</div>		
+		</div>	
+	</body>
+ 
+</html>
